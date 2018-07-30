@@ -1,32 +1,19 @@
-
-let ac = []
-let bh = []
-let bp = []
-let cw = []
-let gk = []
-let hs = []
-let kc = []
-let nz = []
-let rk = []
-let tw = []
+let newObj = {}
 
 const myInit = () => {
     database.ref(`/turbo/`).on(
         'value',
         (snapshot) => (
-            console.log(snapshot.val()),
-                getACParts(snapshot.val()),
-                getBHParts(snapshot.val()),
-                getBPParts(snapshot.val()),
-                getCWParts(snapshot.val()),
-                getGKParts(snapshot.val()),
-                getHSParts(snapshot.val()),
-                getKodeChraParts(snapshot.val()),
-                getNZParts(snapshot.val()),
-                getRKParts(snapshot.val()),
-                getTWParts(snapshot.val()),
-                thenSave(ac, bh, bp, cw, gk, hs, kc, nz, rk, tw)
-
+            getACParts(snapshot.val()),
+            getBHParts(snapshot.val()),
+            getBPParts(snapshot.val()),
+            getCWParts(snapshot.val()),
+            getGKParts(snapshot.val()),
+            getHSParts(snapshot.val()),
+            getKodeChraParts(snapshot.val()),
+            getNZParts(snapshot.val()),
+            getRKParts(snapshot.val()),
+            getTWParts(snapshot.val())
         )
     )
 }
@@ -45,7 +32,23 @@ const getACParts = (turbo) => {
             })
         }
     }
-    return ac = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        actuator: anotherArr.map((o, key) => Object.assign({part: o, amount: 0, group: "actuator"}), {})
+    }
+    console.log(objToAssignRKPart.actuator.length)
+    // objToAssignRKPart.actuator.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
+
 }
 const getBHParts = (turbo) => {
     let anotherArr = []
@@ -60,7 +63,23 @@ const getBHParts = (turbo) => {
             })
         }
     }
-    return bh = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        bearing_housing: anotherArr.map((o, key) => Object.assign({part: o, amount: 0, group: "bearing_housing"}), {})
+    }
+    console.log(objToAssignRKPart.bearing_housing.length)
+
+    // objToAssignRKPart.bearing_housing.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
 
 const getBPParts = (turbo) => {
@@ -76,7 +95,23 @@ const getBPParts = (turbo) => {
             })
         }
     }
-    return bp = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        back_plate: anotherArr.map((o, key) => Object.assign({part: o, amount: 0, group: "back_plate"}), {})
+    }
+    console.log(objToAssignRKPart.back_plate.length)
+
+    // objToAssignRKPart.back_plate.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
 
 const getCWParts = (turbo) => {
@@ -92,7 +127,23 @@ const getCWParts = (turbo) => {
             })
         }
     }
-    return cw = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        compressor_wheel: anotherArr.map((o, key) => Object.assign({part: o, amount: 0,  group: "compressor_wheel"}), {})
+    }
+    console.log(objToAssignRKPart.compressor_wheel.length)
+
+    // objToAssignRKPart.compressor_wheel.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
 const getGKParts = (turbo) => {
     let anotherArr = []
@@ -107,7 +158,23 @@ const getGKParts = (turbo) => {
             })
         }
     }
-    return gk = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        gasket_kit: anotherArr.map((o, key) => Object.assign({part: o, amount: 0,  group: "gasket_kit"}), {})
+    }
+    console.log(objToAssignRKPart.gasket_kit.length)
+    //
+    // objToAssignRKPart.gasket_kit.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
 
 const getNZParts = (turbo) => {
@@ -123,7 +190,23 @@ const getNZParts = (turbo) => {
             })
         }
     }
-    return nz = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        nozzles: anotherArr.map((o, key) => Object.assign({part: o, amount: 0,   group: "nozzles"}), {})
+    }
+    console.log(objToAssignRKPart.nozzles.length)
+
+    // objToAssignRKPart.nozzles.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
 const getHSParts = (turbo) => {
     let anotherArr = []
@@ -138,7 +221,23 @@ const getHSParts = (turbo) => {
             })
         }
     }
-    return hs = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        heat_shield: anotherArr.map((o, key) => Object.assign({part: o, amount: 0,  group: "heat_shield"}), {})
+    }
+    console.log(objToAssignRKPart.heat_shield.length)
+    //
+    // objToAssignRKPart.heat_shield.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
 const getKodeChraParts = (turbo) => {
     let anotherArr = []
@@ -153,7 +252,23 @@ const getKodeChraParts = (turbo) => {
             })
         }
     }
-    return kc = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        KODE_CHRA: anotherArr.map((o, key) => Object.assign({part: o, amount: 0,  group: "KODE_CHRA"}), {})
+    }
+    console.log(objToAssignRKPart.KODE_CHRA.length)
+
+    // objToAssignRKPart.KODE_CHRA.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
 const getRKParts = (turbo) => {
     let anotherArr = []
@@ -168,7 +283,23 @@ const getRKParts = (turbo) => {
             })
         }
     }
-    return rk = [...anotherArr]
+    const objToAssignRKPart = {
+        ...newObj,
+        repair_kit: anotherArr.map((o, key) => Object.assign({part: o, amount: 0,  group: "repair_kit"}), {})
+    }
+    console.log(objToAssignRKPart.repair_kit.length)
+
+    // objToAssignRKPart.repair_kit.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
 
 const getTWParts = (turbo) => {
@@ -178,15 +309,28 @@ const getTWParts = (turbo) => {
         if (singlePart) {
             singlePart.map(el => {
                 if (anotherArr.indexOf(el) === -1) {
-                    anotherArr.push({part: el, amount: 0})
+                    anotherArr.push(el)
                 }
-                return anotherArr
+
             })
         }
     }
-    return tw = [...anotherArr]
+    const objToAssignTWPart = {
+        ...newObj,
+        turbine_wheel: anotherArr.map((o, key) => Object.assign({part: o, amount: 0, group: "turbine_wheel"}), {})
+    }
+    console.log(objToAssignTWPart.turbine_wheel.length)
+
+    // objToAssignTWPart.turbine_wheel.forEach(async (turbo) =>
+    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //         {
+    //             method: `POST`,
+    //             headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(turbo)
+    //         })
+    // )
 }
-const thenSave = (ac, bh, bp, cw, gk, hs, kc, nz, rk, tw) => {
-    database.ref(`/parts`)
-        .set({ac: ac, bh: bh, bp: bp, cw: cw, gk: gk, hs: hs, kc: kc, nz: nz, rk: rk, tw})
-}
+
