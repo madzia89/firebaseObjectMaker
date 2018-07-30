@@ -38,7 +38,7 @@ const getACParts = (turbo) => {
     }
     console.log(objToAssignRKPart.actuator.length)
     // objToAssignRKPart.actuator.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -70,7 +70,7 @@ const getBHParts = (turbo) => {
     console.log(objToAssignRKPart.bearing_housing.length)
 
     // objToAssignRKPart.bearing_housing.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -102,7 +102,7 @@ const getBPParts = (turbo) => {
     console.log(objToAssignRKPart.back_plate.length)
 
     // objToAssignRKPart.back_plate.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -134,7 +134,7 @@ const getCWParts = (turbo) => {
     console.log(objToAssignRKPart.compressor_wheel.length)
 
     // objToAssignRKPart.compressor_wheel.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -165,7 +165,7 @@ const getGKParts = (turbo) => {
     console.log(objToAssignRKPart.gasket_kit.length)
     //
     // objToAssignRKPart.gasket_kit.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -197,7 +197,7 @@ const getNZParts = (turbo) => {
     console.log(objToAssignRKPart.nozzles.length)
 
     // objToAssignRKPart.nozzles.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -228,7 +228,7 @@ const getHSParts = (turbo) => {
     console.log(objToAssignRKPart.heat_shield.length)
     //
     // objToAssignRKPart.heat_shield.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -259,7 +259,7 @@ const getKodeChraParts = (turbo) => {
     console.log(objToAssignRKPart.KODE_CHRA.length)
 
     // objToAssignRKPart.KODE_CHRA.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -290,7 +290,7 @@ const getRKParts = (turbo) => {
     console.log(objToAssignRKPart.repair_kit.length)
 
     // objToAssignRKPart.repair_kit.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
@@ -322,7 +322,7 @@ const getTWParts = (turbo) => {
     console.log(objToAssignTWPart.turbine_wheel.length)
 
     // objToAssignTWPart.turbine_wheel.forEach(async (turbo) =>
-    //     await fetch(`https://turbo-direct-project.firebaseio.com/parts.json`,
+    //     await fetch(`https://XXXXXXX.firebaseio.com/parts.json`,
     //         {
     //             method: `POST`,
     //             headers: {
